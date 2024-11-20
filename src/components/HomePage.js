@@ -1,4 +1,5 @@
 import React from "react";
+import heroImage from '../assets/home_page_graphic.png'; // Importă imaginea
 
 const HomePage = () => {
     return (
@@ -16,14 +17,14 @@ const HomePage = () => {
 
             {/* Hero Section */}
             <section style={styles.hero}>
-                <h1>Get Your Medicines Delivered to Your Doorstep</h1>
-                <p>Fast, reliable, and affordable pharmacy delivery services.</p>
-                <button style={styles.button}>Shop Now</button>
+                {/* Imaginea redimensionată */}
+                <img src={heroImage} alt="Hero Graphic" style={styles.heroImage} />
+                {/*<button style={styles.button}>Shop Now</button>*/}
             </section>
 
             {/* Featured Products Section */}
             <section id="products" style={styles.section}>
-                <h2>Featured Products</h2>
+                <h2>Medicine Guide</h2>
                 <div style={styles.productGrid}>
                     <div style={styles.productCard}>Pain Relievers</div>
                     <div style={styles.productCard}>Vitamins & Supplements</div>
@@ -51,14 +52,14 @@ const HomePage = () => {
     );
 };
 
-// Styles (Simple inline styles for demonstration purposes)
+// Styles (Updated styles for background color and image size)
 const styles = {
     header: {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
         padding: "10px 20px",
-        backgroundColor: "#007BFF",
+        backgroundColor: "#FFC9B9",
         color: "#fff",
     },
     logo: { fontSize: "1.5rem", fontWeight: "bold" },
@@ -66,7 +67,14 @@ const styles = {
     hero: {
         textAlign: "center",
         padding: "50px 20px",
-        backgroundColor: "#f8f9fa",
+        backgroundColor: "#FEFEE3", // Fundalul secțiunii Hero
+    },
+    heroImage: {
+        width: "50%",  // Ajustează lățimea imaginii (50% din lățimea containerului)
+        maxWidth: "400px", // Poți pune o lățime maximă de exemplu de 400px
+        height: "auto", // Păstrează proporțiile imaginii
+        marginBottom: "20px", // Adaugă spațiu sub imagine
+        objectFit: "contain", // Asigură-te că imaginea nu este distorsionată
     },
     button: {
         padding: "10px 20px",
@@ -97,5 +105,6 @@ const styles = {
         color: "#fff",
     },
 };
+
 
 export default HomePage;
