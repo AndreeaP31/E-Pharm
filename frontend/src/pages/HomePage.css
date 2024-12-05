@@ -1,0 +1,192 @@
+
+/* Header styles remain unchanged */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #285c3b; /* Dark green background */
+    padding: 0.5rem 2rem;
+}
+
+.header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fdf2e9; /* Light beige text */
+}
+
+.header .nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.header .nav button {
+    background: none;
+    border: none;
+    color: #fdf2e9;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header .nav button:hover {
+    text-decoration: underline;
+}
+
+/* Menu Section Styles */
+.menu-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #f9f9f9; /* Light gray background for contrast */
+    border-top: 1px solid #ddd; /* Adds a slight divider below the header */
+}
+
+/* Menu Styles */
+.menu {
+    width: 30%; /* Takes 30% of the section width */
+    background-color: #fdf2e9; /* Matches general page theme */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu h2 {
+    font-size: 1.5rem;
+    color: #327b3d;
+    margin-bottom: 1rem;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu li:last-child {
+    border-bottom: none;
+}
+
+/* About Section */
+.about-section {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    width: 80%; /* Adjust width as needed */
+    background-color: #f9e8de; /* Light beige background */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    color: #327b3d; /* Green text color */
+    margin-bottom: 1rem;
+}
+
+.about-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Guide Section */
+.guide-section {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    width: 80%;
+}
+
+.guide-section h2 {
+    font-size: 2rem;
+    color: #327b3d; /* Green text color */
+    margin-bottom: 1rem;
+}
+
+/* Buttons */
+.guide-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem; /* Spacing between buttons */
+}
+
+.guide-buttons button {
+    background-color: #327b3d; /* Dark green background */
+    color: #fdf2e9; /* Light beige text */
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.guide-buttons button:hover {
+    background-color: #27592b; /* Darker green on hover */
+}
+
+
+/* Image Styles */
+.menu-image {
+    width: 65%; /* Takes 65% of the section width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Footer Styles */
+.footer {
+    background-color: #f6c6b2; /* Light pink background */
+    text-align: center;
+    padding: 2rem 0; /* Padding for spacing */
+    margin-top: 2rem;
+}
+
+.footer h1 {
+    font-size: 1.5rem;
+    color: #fdf2e9; /* Light beige text */
+    margin: 0;
+}
+
+.footer-icon {
+    margin-top: 0.5rem;
+    color: #fdf2e9; /* Light beige icon */
+    font-size: 1.5rem;
+}
+
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .menu-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu,
+    .menu-image {
+        width: 100%;
+    }
+
+    .menu {
+        margin-bottom: 1rem;
+    }
+}
