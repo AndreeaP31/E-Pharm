@@ -1,7 +1,10 @@
 import React from "react";
 import "./HomePage.css";
+import { Link, useNavigate} from "react-router-dom";
+
 
 function HomePage() {
+
     return (
         <div className="homepage">
             {/* Header */}
@@ -15,8 +18,11 @@ function HomePage() {
                         <i className="fas fa-shopping-cart"></i> Cosul meu
                     </button>
                     <button>
-                        <i className="fas fa-user"></i> Contul meu
+                    <Link to="/signup" className="button-link">
+                     <i className="fas fa-user"></i> Contul meu
+                    </Link>
                     </button>
+                    
                 </nav>
             </header>
 
