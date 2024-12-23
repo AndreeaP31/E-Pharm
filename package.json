@@ -21,7 +21,8 @@
     "jsonwebtoken": "^9.0.2",
     "mailtrap": "^3.4.0",
     "mongoose": "^8.8.3",
-    "mongose": "^0.0.2-security"
+    "mongose": "^0.0.2-security",
+    "vite": "^6.0.3"
   },
   "devDependencies": {
     "nodeman": "^1.1.2",

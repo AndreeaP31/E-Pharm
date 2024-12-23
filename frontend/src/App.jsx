@@ -7,7 +7,7 @@ import HomePage from "./pages/HomePage";
 function App() {
   return (
     
-    <div className="min-h-screen bg-gradient-to-br from-yellow-200 via-green-600 to-emerald-900 relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden">
       <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path="/signup" element={<SignupPage />} />

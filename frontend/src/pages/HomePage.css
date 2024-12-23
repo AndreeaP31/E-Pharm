@@ -11,7 +11,7 @@
 .header .logo {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #fdf2e9; /* Light beige text */
+    color: #e378a8; /* Light beige text */
 }
 
 .header .nav {
@@ -22,7 +22,7 @@
 .header .nav button {
     background: none;
     border: none;
-    color: #fdf2e9;
+    color: #fbc5dc;
     font-size: 1rem;
     cursor: pointer;
     display: flex;
@@ -34,23 +34,29 @@
     text-decoration: underline;
 }
 
+/* Wrapper for Menu Section and About Section */
+.content-wrapper {
+    background-color: #fcf8f5; /* Light beige background */
+    padding: 2rem 0; /* Add padding above and below */
+}
+
+
 /* Menu Section Styles */
 .menu-section {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     padding: 2rem;
-    background-color: #f9f9f9; /* Light gray background for contrast */
     border-top: 1px solid #ddd; /* Adds a slight divider below the header */
 }
 
 /* Menu Styles */
 .menu {
     width: 30%; /* Takes 30% of the section width */
-    background-color: #fdf2e9; /* Matches general page theme */
+    background-color: #fbc5dc; /* Matches general page theme */
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .menu h2 {
@@ -82,9 +88,11 @@
     margin: 2rem auto;
     padding: 1.5rem;
     width: 80%; /* Adjust width as needed */
-    background-color: #f9e8de; /* Light beige background */
+    background-color: #fbc5dc; 
+    position: relative; /* Ensures it sits on top */
+    z-index: 1; /* Ensures visibility above the parent */
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .about-section h2 {
@@ -155,10 +163,10 @@
 
 /* Footer Styles */
 .footer {
-    background-color: #f6c6b2; /* Light pink background */
+    background-color: #e378a8; 
     text-align: center;
     padding: 2rem 0; /* Padding for spacing */
-    margin-top: 2rem;
+    margin-top: 0;
 }
 
 .footer h1 {
