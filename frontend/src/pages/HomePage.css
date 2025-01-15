@@ -1,5 +1,4 @@
-
-/* Header styles remain unchanged */
+/* Header Styles */
 .header {
     display: flex;
     justify-content: space-between;
@@ -14,24 +13,40 @@
     color: #fdf2e9; /* Light beige text */
 }
 
+/* Navigation Styles */
 .header .nav {
     display: flex;
-    gap: 1.5rem;
+    align-items: center;
+    gap: 1rem; /* Spacing between elements */
 }
 
 .header .nav button {
     background: none;
     border: none;
-    color: #fdf2e9;
+    color: #fdf2e9; /* Light beige text */
     font-size: 1rem;
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    transition: color 0.3s ease;
 }
 
 .header .nav button:hover {
     text-decoration: underline;
+    color: #c7e3d3; /* Slightly lighter color on hover */
+}
+
+.header .nav .logout-button {
+    font-size: 1rem; /* Same size as other buttons */
+    font-weight: normal; /* Match weight with other buttons */
+    color: #fdf2e9; /* Consistent color */
+}
+
+.header .nav .welcome-message {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fdf2e9;
 }
 
 /* Menu Section Styles */
@@ -113,7 +128,6 @@
     margin-bottom: 1rem;
 }
 
-/* Buttons */
 .guide-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -136,7 +150,6 @@
     background-color: #27592b; /* Darker green on hover */
 }
 
-
 /* Image Styles */
 .menu-image {
     width: 65%; /* Takes 65% of the section width */
@@ -151,7 +164,6 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 
 /* Footer Styles */
 .footer {
@@ -173,7 +185,6 @@
     font-size: 1.5rem;
 }
 
-
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     .menu-section {
@@ -188,5 +199,11 @@
 
     .menu {
         margin-bottom: 1rem;
+    }
+
+    .header .nav {
+        flex-direction: column; /* Align vertically for smaller screens */
+        align-items: flex-end;
+        gap: 0.5rem; /* Reduce spacing for smaller screens */
     }
 }

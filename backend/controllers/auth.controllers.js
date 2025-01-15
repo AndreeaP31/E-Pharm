@@ -49,6 +49,7 @@ export const signup = async (req, res) => {
 		res.status(400).json({ success: false, message: error.message });
 	}
 };
+
 export const login = async (req, res) => {
 	const { email, password } = req.body;
 	try {
@@ -79,6 +80,7 @@ export const login = async (req, res) => {
 		res.status(400).json({ success: false, message: error.message });
 	}
 };
+
 
 
 
