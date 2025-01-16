@@ -1,0 +1,90 @@
+/* Stiluri generale */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Fundal deschis */
+  }
+  
+  /* Containerul principal pentru pagina comenzii */
+  .order-details-page {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fce4ec; /* Roz deschis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    min-height: 60vh; /* Asigură o înălțime minimă */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Titlul paginii */
+  .order-details-page h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #327b3d; /* Verde închis */
+    font-weight: bold;
+  }
+  
+  /* Formularul de comandă */
+  .order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%; /* Asigură că formularul se încadrează în container */
+  }
+  
+  /* Grupul de câmpuri din formular */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #327b3d; /* Verde închis pentru etichete */
+  }
+  
+  .form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  /* Mesaje de eroare */
+  .error {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  /* Butonul de plasare a comenzii */
+  .place-order-btn {
+    background-color: #28a745; /* Verde pentru buton */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .place-order-btn:hover {
+    background-color: #218838; /* Verde mai închis la hover */
+  }
+  
+  /* Adăugăm un mesaj de succes după plasarea comenzii */
+  .success-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #28a745; /* Verde pentru succes */
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  

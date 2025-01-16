@@ -1,0 +1,121 @@
+/* Stiluri generale */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Fundal deschis */
+  }
+  
+  /* Container principal pentru pagina coșului */
+  .cart-page {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fce4ec; /* Roz deschis pentru întreaga pagină */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    min-height: 100vh; /* Asigură că pagina acoperă întreaga înălțime */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrează conținutul */
+  }
+  
+  /* Titlul paginii */
+  .cart-page h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #327b3d; /* Verde închis pentru titlu */
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  /* Lista produselor din coș */
+  .cart-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Se ajustează pentru a se potrivi cu containerul */
+  }
+  
+  /* Cardurile de produse din coș */
+  .cart-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background-color: #fff; /* Fundal alb pentru fiecare element din coș */
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .cart-list li:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cart-list li p {
+    margin: 0;
+    font-size: 16px;
+    color: #343a40; /* Culoare text generală */
+  }
+  
+  /* Total preț și secțiune de comandă */
+  .total-section {
+    margin-top: 20px;
+    text-align: right;
+  }
+  
+  .total-section p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #343a40;
+  }
+  
+  /* Buton de plasare a comenzii */
+  .place-order-btn {
+    display: inline-block;
+    background-color: #28a745; /* Verde pentru buton */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .place-order-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+  }
+  
+  .place-order-btn:active {
+    background-color: #1e7e34;
+    transform: scale(0.95);
+  }
+  
+  /* Mesaj pentru coș gol */
+  .empty-cart {
+    text-align: center;
+    font-size: 18px;
+    color: #6c757d; /* Culoare gri pentru mesajul de coș gol */
+    margin-top: 20px;
+  }
+  
+  /* Responsive Design pentru ecrane mici */
+  @media (max-width: 768px) {
+    .cart-page {
+      padding: 1rem; /* Redu padding-ul pentru ecrane mai mici */
+    }
+  
+    .cart-list li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .total-section {
+      text-align: left;
+    }
+  }
+  

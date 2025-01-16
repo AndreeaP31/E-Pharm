@@ -1,10 +1,17 @@
 import mongoose from "mongoose";
 
-const ProductSchema = new mongoose.Schema({
+const productSchema = new mongoose.Schema({
   name: { type: String, required: true },
   description: { type: String },
+  use: {
+    type: String,
+    required: true,
+    enum: ["dureri cap", "febra", "raceala", "dureri musculare"], // Valori predefinite
+  },
   price: { type: Number, required: true },
-  pharmacy: { type: String, required: true }, // Unique identifier for the pharmacy (e.g., "teifarmacia")
+  pharmacy: { type: String, required: true }, // Numele farmaciei
 });
 
-export default mongoose.model("Product", ProductSchema);
+const Product = mongoose.model("Product", productSchema);
+
+export default Product;

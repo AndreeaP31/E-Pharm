@@ -34,9 +34,9 @@ const SignupPage = () => {
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      await signup(email, password, name);
+      await signup(email, password, name); // Apelarea funcției signup din store
       console.log("Navigating...");
-      navigate("/");
+      navigate("/"); // Navigăm către HomePage după succes
     } catch (error) {
       console.log("Signup failed:", error);
     }
@@ -81,8 +81,10 @@ const SignupPage = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
 
+            {/* Error Message */}
             {error && <p className="error-text">{error}</p>}
 
+            {/* Sign Up Button */}
             <div>
               <motion.button
                 className="signup-button"

@@ -1,0 +1,110 @@
+/* Stiluri generale */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Fundal deschis */
+  }
+  
+  /* Containerul principal pentru pagina comenzii */
+  .order-status-page {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fce4ec; /* Roz deschis */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 60vh; /* Asigură o înălțime minimă */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Titlul paginii */
+  .order-status-page h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #327b3d; /* Verde închis pentru titlu */
+    font-weight: bold;
+  }
+  
+  /* Lista comenzilor */
+  .orders-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Se ajustează pentru a se potrivi cu containerul */
+  }
+  
+  /* Cardul de comandă */
+  .order-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fff; /* Fundal alb pentru card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Umbră ușoară */
+  }
+  
+  .order-card h2 {
+    margin-top: 0;
+    color: #327b3d; /* Verde pentru titlul comenzii */
+  }
+  
+  .order-card ul {
+    padding-left: 20px;
+  }
+  
+  /* Stilizare pentru statusul comenzii */
+  .order-card .status {
+    font-weight: bold;
+    color: #b13c7d; /* Roz închis */
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #f8c8d5; /* Fundal roz deschis pentru contrast */
+    display: inline-block;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+  
+  /* Mesaj în cazul în care nu sunt comenzi */
+  .no-orders {
+    text-align: center;
+    color: #888;
+    font-size: 1.2rem;
+  }
+  
+  /* Butoane pentru acțiuni (ex: acceptare/refuzare) */
+  .order-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .accept-button {
+    background-color: #28a745; /* Verde pentru acceptare */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .accept-button:hover {
+    background-color: #218838;
+  }
+  
+  .decline-button {
+    background-color: #dc3545; /* Roșu pentru anulare */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .decline-button:hover {
+    background-color: #c82333;
+  }
+  

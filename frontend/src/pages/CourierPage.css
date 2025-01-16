@@ -1,9 +1,9 @@
-/* Header Styles */
+/* Header */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2a4d69; /* Blue-gray background specific for couriers */
+    background-color: #285c3b; /* Fond verde închis pentru header */
     padding: 0.5rem 2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -11,21 +11,21 @@
 .header .logo {
     font-size: 2rem;
     font-weight: bold;
-    color: #fdf2e9; /* Light beige text */
+    color: #fdf2e9; /* Text de culoare deschisă (beige) */
 }
 
-/* Navigation Styles */
+/* Navigation */
 .header .nav {
     display: flex;
     align-items: center;
-    gap: 1rem; /* Spacing between elements */
+    gap: 1rem; /* Spațiere între elemente */
 }
 
 .header .nav button {
     background: none;
     border: none;
-    color: #fdf2e9; /* Light beige text */
-    font-size: 1rem;
+    color: #fdf2e9; /* Text de culoare deschisă */
+    font-size: 1.25rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -35,33 +35,117 @@
 
 .header .nav button:hover {
     text-decoration: underline;
-    color: #c7e3d3; /* Slightly lighter color on hover */
+    color: #c7e3d3; /* Culoare mai deschisă la hover */
 }
 
 .header .nav .logout-button {
-    font-size: 1rem; /* Same size as other buttons */
+    font-size: 1rem; /* Dimensiune font consistentă cu celelalte butoane */
     font-weight: bold;
-    color: #fdf2e9; /* Consistent color */
+    color: #fdf2e9;
 }
 
 .header .nav .welcome-message {
     font-size: 1.2rem;
     font-weight: bold;
     color: #fdf2e9;
-    margin-left: auto; /* Pushes the message to the far right */
+    margin-left: auto; /* Aliniere mesaj la dreapta */
 }
 
-/* Page Background */
+/* Fundal roz deschis pentru întreaga pagină de curier */
 .courier-page {
-    background: linear-gradient(to bottom right, #d4eaf2, #9cc5dc); /* Light blue gradient */
-    min-height: 100vh;
+    background-color: #fce4ec; /* Roz deschis */
+    padding: 2rem 0; /* Adăugăm padding pentru spațiere */
+    min-height: 100vh; /* Asigurăm că pagina acoperă întreaga înălțime */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
 }
 
-/* Responsive Design */
+/* Secțiunea de comenzi */
+.orders-section {
+    background-color: #fff; /* Fundal alb pentru secțiunea de comenzi */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Listă de comenzi */
+.orders-list {
+    list-style: none;
+    padding: 0;
+}
+
+.order-card {
+    background-color: #f8f9fa; /* Fundal ușor gri pentru fiecare comandă */
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.order-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.order-card p {
+    font-size: 1rem;
+    margin: 0.3rem 0;
+}
+
+/* Butoane pentru acțiuni */
+.order-actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 10px;
+}
+
+.accept-button, .decline-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.accept-button {
+    background-color: #28a745; /* Verde pentru acceptare */
+    color: white;
+}
+
+.accept-button:hover {
+    background-color: #218838;
+}
+
+.decline-button {
+    background-color: #dc3545; /* Roșu pentru anulare */
+    color: white;
+}
+
+.decline-button:hover {
+    background-color: #c82333;
+}
+
+/* Statusul comenzii */
+.status {
+    font-weight: bold;
+    color: #b13c7d; /* Roz închis */
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #f8c8d5; /* Culoare de fundal roz deschis pentru contrast */
+    display: inline-block;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Mesaje de eroare */
+.error {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Responsive Design pentru ecrane mici */
 @media (max-width: 768px) {
     .header {
         flex-direction: column;

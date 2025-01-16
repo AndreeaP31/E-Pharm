@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import { Lock, Mail } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Importăm useNavigate
+import { useAuthStore } from "../store/authStore"; // Importăm store-ul de autentificare
 import "./LoginPage.css";
 
-// Updated Input Component (matching SignupPage structure)
+// Input Component
 const Input = ({ icon: Icon, type, placeholder, value, onChange }) => {
   return (
     <div className="input-wrapper">
@@ -25,9 +27,17 @@ const Input = ({ icon: Icon, type, placeholder, value, onChange }) => {
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate(); // Hook-ul pentru navigare
+  const { login, isLoading, error } = useAuthStore(); // Extragem funcția login și stările din store
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
+    try {
+      await login(email, password); // Apelăm funcția de login din store
+      navigate("/"); // Navigăm către HomePage
+    } catch (err) {
+      console.error("Login failed:", err);
+    }
   };
 
   return (
@@ -60,14 +70,19 @@ const LoginPage = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
 
+            {/* Error Message */}
+            {error && <p className="error-message">{error}</p>}
+
+            {/* Login Button */}
             <div>
               <motion.button
                 className="login-button"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
+                disabled={isLoading}
               >
-                Login
+                {isLoading ? "Loading..." : "Login"}
               </motion.button>
             </div>
           </form>

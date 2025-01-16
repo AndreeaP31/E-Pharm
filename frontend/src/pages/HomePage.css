@@ -1,200 +1,237 @@
-
-/* Header styles remain unchanged */
-.header {
+/* Stiluri generale */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Fundal deschis */
+  }
+  
+  /* Containerul principal pentru pagina HomePage */
+  .homepage {
+    background-color: #fce4ec; /* Roz deschis */
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Header-ul */
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #285c3b; /* Dark green background */
-    padding: 0.5rem 2rem;
-}
-
-.header .logo {
-    font-size: 1.8rem;
+    background-color: #285c3b; /* Verde închis */
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header .logo {
+    font-size: 2rem;
+    color: #e378a8; /* Text de culoare roz */
     font-weight: bold;
-    color: #e378a8; /* Light beige text */
-}
-
-.header .nav {
+  }
+  
+  .header .nav {
     display: flex;
     gap: 1.5rem;
-}
-
-.header .nav button {
+  }
+  
+  .header .nav button {
     background: none;
     border: none;
     color: #fbc5dc;
-    font-size: 1rem;
+    font-size: 1.25rem;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.header .nav button:hover {
+  }
+  
+  .header .nav button:hover {
     text-decoration: underline;
-}
-
-/* Wrapper for Menu Section and About Section */
-.content-wrapper {
-    background-color: #fcf8f5; /* Light beige background */
-    padding: 2rem 0; /* Add padding above and below */
-}
-
-
-/* Menu Section Styles */
-.menu-section {
+  }
+  
+  .header .welcome-message {
+    color: #fdf2e9;
+    font-weight: bold;
+    margin-left: auto;
+  }
+  
+  /* Wrapper pentru secțiunea principală */
+  .content-wrapper {
     display: flex;
-    align-items: flex-start;
     justify-content: space-between;
-    padding: 2rem;
-    border-top: 1px solid #ddd; /* Adds a slight divider below the header */
-}
-
-/* Menu Styles */
-.menu {
-    width: 30%; /* Takes 30% of the section width */
-    background-color: #fbc5dc; /* Matches general page theme */
-    padding: 1rem;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 2rem;
+    gap: 3rem;
+  }
+  
+  /* Secțiunea de meniuri - farmacii */
+  .menu-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%;
+  }
+  
+  .menu {
+    background-color: #faf5f7; /* Fundal deschis pentru meniuri */
+    padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-}
-
-.menu h2 {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  .menu h2 {
     font-size: 1.5rem;
-    color: #327b3d;
+    color: #327b3d; /* Verde pentru titluri */
     margin-bottom: 1rem;
-}
-
-.menu ul {
+  }
+  
+  .menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-.menu li {
+  }
+  
+  .menu li {
     padding: 0.5rem 0;
     font-size: 1.2rem;
     color: #333;
     border-bottom: 1px solid #ddd;
-}
-
-.menu li:last-child {
+  }
+  
+  .menu li:last-child {
     border-bottom: none;
-}
-
-/* About Section */
-.about-section {
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: #07210b; /* Link-uri verzi */
+  }
+  
+  .menu li a:hover {
+    color: #2d472f;
+  }
+  
+  /* Secțiunea Despre Noi */
+  .about-section {
+    background-color: #faf5f7;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 65%;
     text-align: center;
-    margin: 2rem auto;
-    padding: 1.5rem;
-    width: 80%; /* Adjust width as needed */
-    background-color: #fbc5dc; 
-    position: relative; /* Ensures it sits on top */
-    z-index: 1; /* Ensures visibility above the parent */
-    border-radius: 10px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-}
-
-.about-section h2 {
+  }
+  
+  .about-section h2 {
     font-size: 2rem;
-    color: #327b3d; /* Green text color */
+    color: #327b3d;
     margin-bottom: 1rem;
-}
-
-.about-section p {
-    font-size: 1rem;
-    line-height: 1.5;
+  }
+  
+  .about-section p {
+    font-size: 1.1rem;
     color: #333;
-}
-
-/* Guide Section */
-.guide-section {
-    text-align: center;
-    margin: 2rem auto;
-    padding: 1.5rem;
-    width: 80%;
-}
-
-.guide-section h2 {
+    line-height: 1.5;
+  }
+  
+  /* Butoane Ghid Medicamente */
+  .guide-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  
+  .guide-section h2 {
     font-size: 2rem;
-    color: #327b3d; /* Green text color */
+    color: #327b3d;
     margin-bottom: 1rem;
-}
-
-/* Buttons */
-.guide-buttons {
+  }
+  
+  .guide-buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem; /* Spacing between buttons */
-}
-
-.guide-buttons button {
-    background-color: #327b3d; /* Dark green background */
-    color: #fdf2e9; /* Light beige text */
+  }
+  
+  .guide-buttons button {
+    background-color: #327b3d;
+    color: #fdf2e9;
     border: none;
     padding: 0.8rem 2rem;
     border-radius: 20px;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-.guide-buttons button:hover {
-    background-color: #27592b; /* Darker green on hover */
-}
-
-
-/* Image Styles */
-.menu-image {
-    width: 65%; /* Takes 65% of the section width */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-
-/* Footer Styles */
-.footer {
-    background-color: #e378a8; 
+  }
+  
+  .guide-buttons button:hover {
+    background-color: #27592b;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #e378a8;
     text-align: center;
-    padding: 2rem 0; /* Padding for spacing */
-    margin-top: 0;
-}
-
-.footer h1 {
+    padding: 2rem;
+    width: 100%;
+    margin-top: 2rem;
+    border-radius: 8px;
+  }
+  
+  .footer h1 {
     font-size: 1.5rem;
-    color: #fdf2e9; /* Light beige text */
-    margin: 0;
-}
-
-.footer-icon {
+    color: #fdf2e9;
+  }
+  
+  .footer-icon {
     margin-top: 0.5rem;
-    color: #fdf2e9; /* Light beige icon */
+    color: #fdf2e9;
     font-size: 1.5rem;
-}
-
-
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+  
     .menu-section {
-        flex-direction: column;
-        align-items: center;
+      width: 100%;
     }
-
-    .menu,
-    .menu-image {
-        width: 100%;
+  
+    .about-section {
+      width: 100%;
     }
-
-    .menu {
-        margin-bottom: 1rem;
-    }
-}
+  }
+  
+  .nav .button-link {
+    text-decoration: none;
+    color: white;
+    background-color: #fbc5dc;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .nav .button-link:hover {
+    background-color: #fbc5dc;
+  }
+  
+  .logout-button {
+    background-color: #dc3545;
+  }
+  
+  .logout-button:hover {
+    background-color: #c82333;
+  }
+  

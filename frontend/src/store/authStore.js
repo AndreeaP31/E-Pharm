@@ -8,6 +8,9 @@ const COURIER_API_URL = import.meta.env.MODE === "development"
     ? "http://localhost:5000/api/courier"
     : "/api/courier";
 
+const PHARMACY_API_URL = import.meta.env.MODE === "development"
+    ? "http://localhost:5000/api/pharmacy"
+    : "/api/pharmacy";
 axios.defaults.withCredentials = true;
 
 export const useAuthStore = create((set) => ({
@@ -17,6 +20,35 @@ export const useAuthStore = create((set) => ({
 	isLoading: false,
 	isCheckingAuth: true,
 	message: null,
+
+    fetchPharmacies: async () => {
+        set({ isLoading: true, error: null });
+        try {
+            const response = await axios.get(`${PHARMACY_API_URL}`);
+            set({ pharmacies: response.data, isLoading: false });
+        } catch (error) {
+            set({ error: error.response?.data?.message || "Error fetching pharmacies", isLoading: false });
+            throw error;
+        }
+    },
+
+    // Adaugă o farmacie nouă
+    addPharmacy: async (name, address, phoneNumber, email, openHours) => {
+        set({ isLoading: true, error: null });
+        try {
+            const response = await axios.post(`${PHARMACY_API_URL}/add`, {
+                name,
+                address,
+                phoneNumber,
+                email,
+                openHours,
+            });
+            set({ message: "Pharmacy added successfully", isLoading: false });
+        } catch (error) {
+            set({ error: error.response?.data?.message || "Error adding pharmacy", isLoading: false });
+            throw error;
+        }
+    },
 
 	signup: async (email, password, name) => {
         set({ isLoading: true, error: null });

@@ -6,9 +6,13 @@ import path from "path";
 
 import { connectDB } from "./db/connectDB.js";
 
+import pharmacyRoutes from "./routes/pharmacy.route.js";
 import authRoutes from "./routes/auth.route.js";
+import productRoutes from "./routes/product.route.js";
 import courierRoutes from "./routes/courier.route.js"; // Importă rutele pentru curieri
 import applyingCourierRoutes from "./routes/applyingCourier.route.js";
+import orderRoutes from "./routes/order.routes.js";
+import mongoose from "mongoose";
 
 dotenv.config();
 
@@ -26,8 +30,10 @@ app.use("/api/auth", authRoutes);
 
 // Rute pentru autentificarea curierilor
 app.use("/api/courier", courierRoutes);
+app.use("/api/products", productRoutes);
+app.use("/api/pharmacy", pharmacyRoutes);
 app.use("/api/applying-courier", applyingCourierRoutes);
-
+app.use("/api/orders", orderRoutes);
 if (process.env.NODE_ENV === "production") {
 	app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
@@ -35,7 +41,14 @@ if (process.env.NODE_ENV === "production") {
 		res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
 	});
 }
-
+mongoose.connection.on("connected", () => {
+	console.log("Connected to MongoDB");
+  });
+  
+  mongoose.connection.on("error", (err) => {
+	console.error("MongoDB connection error:", err);
+  });
+  
 app.listen(PORT, () => {
 	connectDB();
 	console.log("Server is running on port: ", PORT);

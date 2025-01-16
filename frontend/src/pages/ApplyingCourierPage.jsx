@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Mail, User, Phone, Building, Loader } from "lucide-react";
 import Input from "../components/Input";
 import axios from "axios";
+import "./ApplyingCourierPage.css"; // Importăm fișierul CSS
 
 const ApplyingCourierPage = () => {
     const [name, setName] = useState("");
@@ -35,11 +36,11 @@ const ApplyingCourierPage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center justify-center min-h-screen bg-gradient-to-br from-yellow-200 via-green-600 to-emerald-900"
+            className="applying-courier-page-container" /* Folosim clasa din fișierul CSS */
         >
-            <div className="max-w-md w-full bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-xl rounded-2xl shadow-xl overflow-hidden">
+            <div className="applying-courier-card"> {/* Folosim clasa din fișierul CSS */}
                 <div className="p-8">
-                    <h2 className="text-3xl font-bold mb-6 text-center text-transparent bg-gradient-to-r from-green-400 to-green-600 bg-clip-text">
+                    <h2 className="applying-courier-title">
                         Aplica acum!
                     </h2>
                     <form onSubmit={handleApply}>
@@ -71,11 +72,11 @@ const ApplyingCourierPage = () => {
                             value={pharmacyDesired}
                             onChange={(e) => setPharmacyDesired(e.target.value)}
                         />
-                        {message && <p className="text-green-400 font-semibold mt-2">{message}</p>}
+                        {message && <p className="apply-message">{message}</p>} {/* Aplicăm stiluri din CSS */}
                         <motion.button
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
-                            className="mt-5 w-full py-3 px-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold rounded-lg shadow-lg hover:from-green-600 hover:to-emerald-700 transition duration-200"
+                            className="apply-button" /* Folosim clasa din fișierul CSS */
                             type="submit"
                             disabled={isLoading}
                         >
