@@ -109,8 +109,7 @@ res.cookie('token', token, {
 ## Screenshots
 
 ### 🏠 Home Page
-![image](https://github.com/user-attachments/assets/8631e075-a8bb-41d6-94dd-4e58f8913a4c)
-
+![image](https://github.com/user-attachments/assets/83e6853f-69da-41ab-957c-a8ea4fae441e)
 
 ### 🔐 Login & Sign Up
 ![image](https://github.com/user-attachments/assets/80a64fb8-7dd4-4b7d-a138-42f90345a0e0)
