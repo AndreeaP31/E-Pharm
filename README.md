@@ -12,11 +12,11 @@
 7. [Screenshots](#screenshots)
 8. [Team Members](#team-members)
 
-## 🩺 Project Overview
+## Project Overview
 
 **E-Pharm** allows users to browse a catalog of medications, manage their shopping cart, and place orders quickly and securely. The system also provides a dashboard for couriers to manage deliveries. The app is built using the MERN stack and integrates Firebase for authentication and real-time features.
 
-## ⚙️ Installation
+## Installation
 
 ### 🔧 Backend
 
@@ -62,7 +62,7 @@ npm run dev
 
 App will be available at: `http://localhost:5173`
 
-## 🚀 Usage
+## Usage
 
 **Users can:**
 - Register and log in
@@ -73,7 +73,7 @@ App will be available at: `http://localhost:5173`
 - View assigned deliveries
 - Update delivery status
 
-## ✅ Features
+## Features
 
 - Secure authentication with JWT and HTTP-only cookies
 - Responsive design using TailwindCSS
@@ -81,7 +81,7 @@ App will be available at: `http://localhost:5173`
 - Cart functionality
 - Courier dashboard
 
-## 🧪 Technologies Used
+## Technologies Used
 
 - MongoDB
 - Express.js
@@ -91,7 +91,7 @@ App will be available at: `http://localhost:5173`
 - Firebase
 - JavaScript
 
-## 🍪 Cookies and Authentication
+## Cookies and Authentication
 
 JWT is stored in an HTTP-only cookie:
 
@@ -106,7 +106,7 @@ res.cookie('token', token, {
 });
 ```
 
-## 🖼️ Screenshots
+## Screenshots
 
 ### 🏠 Home Page
 ![image](https://github.com/user-attachments/assets/8631e075-a8bb-41d6-94dd-4e58f8913a4c)
@@ -130,7 +130,7 @@ res.cookie('token', token, {
 ### 📦 Courier Page
 ![image](https://github.com/user-attachments/assets/1e007354-5b5a-4103-972c-74eb964d57ba)
 
-## 👥 Team Members
+## Team Members
 
 - **Andreea Popovici** – Backend Developer, Database Management, API Routing  
   [GitHub](https://github.com/AndreeaP31)
